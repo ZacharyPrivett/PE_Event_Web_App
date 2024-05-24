@@ -1,0 +1,306 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    text-decoration: none;
+    background-color: #100db3; 
+    font-size: larger;
+    color: #f7f1f1;
+}
+
+a {
+    text-decoration: none;
+    color: #f7f1f1;
+}   
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 1px 60px;
+}
+
+.grid-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100%;   
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.grid-main-events {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    font-size: 25px;
+}
+
+.grid-main-events p {
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+.grid-main-events h3 {
+    margin-top: 1em;
+}
+
+.grid-main-events a {
+    text-decoration: none;
+    color: black;
+}
+
+.grid-main-event {
+    display: grid;
+    grid-template-columns: 1fr 250px 4fr 1fr;
+    font-size: larger;
+}
+
+.grid-main-event p {
+    font-size: larger;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.event-h3 {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    font-size: 25px;
+    margin-bottom: 1em;
+}
+
+.event-h3 img {
+    height: 35px;
+    margin-left: 15px;
+}
+
+.event-image {
+    max-height: 300px;
+    margin-top: 20px;
+    max-width: 250px;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-footer img {
+    float: right;
+    height: 40px;
+}
+
+.profile-h3 {
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    font-size: 25px;
+    margin-bottom: 1em;
+}
+
+.profile-h3 img {
+    height: 35px;
+    margin-left: 15px;
+}
+
+.profile-h3 a {
+    color: black;
+}
+
+.profile-h3 h2 {
+    margin-bottom: 1em;
+}
+
+.profile-h3 p {
+    margin-bottom: .2em;
+}
+
+main {
+    text-align: left;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+    font-size: large;
+
+}
+
+label {
+    margin-top: 1em;
+    
+}
+
+input {
+    margin-top: 1em;
+}
+
+select {
+    width: 100%;
+    margin-top: 1em;
+}
+
+button {
+    width: 100%;
+    margin-top: 1em;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    overflow: auto;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 3rem;
+}
+
+hr {
+   background-color: #f7f1f1;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+
+ul {
+    list-style-type: none;   
+}
+li {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline;
+    color: #f7f1f1;
+}
+
+.nav-right {
+    float: right;
+    margin-top: 50px;  
+}
+
+.footer-nav-left {
+    margin-top: 15px;
+}
+
+.footer-nav-right {
+    float: right;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.footer-nav-right img {
+    padding-left: 1rem;
+    height: 25px;
+}
+
+
+.nav-lower {
+    margin-top: 17px;
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+}
+
+.container {
+    margin-right: 4rem;
+}
+
+.logo {
+    height: 130px;
+    width: 180px;
+    margin-left: 3rem;
+    margin-right: 2rem;
+}
+
+.editDelete-button {
+    max-width: 55px;
+    min-width: 55px;
+    padding-right: .5rem;
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: -30px;
+}
+
+.profile-h3 img {
+    height: 25px;
+    margin-left: 10px;
+}
+
+main h1 {
+    margin-bottom: 1em;
+}
+
+image {
+    width: auto;
+}
+
+.error {
+    background-color: rgba(247, 65, 65, 0.911);
+    text-align: center;
+    margin-left: 15em;
+    margin-right: 15em;
+    margin-top: .7em;
+    padding-top: .7em;
+    padding-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.success {
+    background-color: rgba(65, 247, 74, 0.911);
+    text-align: center;
+    margin-left: 15em;
+    margin-right: 15em;
+    margin-top: .7em;
+    padding-top: .7em;
+    padding-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.rsvp {
+    padding-top: 20px;
+}
+
+.rsvp button {
+    width: 5%;
+    height: 30px;
+}
+
+.my-rsvp {
+    text-align: right;
+}
+
+.my-rsvp a {
+    padding-right: 20%;
+    float: left;
+    
+}
+
+.yes {
+    background-color: rgb(10, 161, 10);
+    color: white;
+    border: #f7f1f1;
+    font-weight: bold;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.no {
+    background-color: rgb(182, 6, 6);
+    color: white;
+    border: #f7f1f1;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.maybe {
+    background-color: rgb(219, 207, 34);
+    border: #f7f1f1;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+

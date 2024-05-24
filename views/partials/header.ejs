@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Home</title>
+</head>
+<body>
+    <header class="grid">
+        <nav class="nav-upper">
+            <ul class="container">
+                <li><a href="/"><img class="logo" src="/images/PrivettEnterprise-logos_transparent2.png" alt="Privett Enterprise Logo"></a></li>
+                <% if(!user) { %>
+                <li class="nav-right"><a href="/users/login">Login</a></li>
+                <li class="nav-right"><a href="/users/new">Sign Up</a></li>
+                <% } else { %>
+                <li class="nav-right"><a href="/users/logout">Logout</a></li>    
+                <li class="nav-right"><a href="/users/profile"> <%= user.firstName %>'s Profile</a></li>
+                <li class="nav-right"><a href="/events/newEvent">New Event</a></li>
+                <% } %>
+
+            </ul>
+        </nav>
+        <hr>
+        <nav class="nav-lower">
+            <ul>
+                <li><a href="/events/all">Events</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+
+    <% if(errorMessages.length > 0) { %>
+        <% errorMessages.forEach(message =>{ %>
+            <div class='error'>
+                <p><%= message %></p>
+            </div>
+            <% }); %>
+                <% } %>
+                    <% if(successMessages.length > 0) { %>
+                        <% successMessages.forEach(message=>{ %>
+                            <div class='success'>
+                                <p><%= message %></p>
+                            </div>
+                            <% }); %>
+                                <% } %>

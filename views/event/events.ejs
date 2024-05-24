@@ -1,0 +1,21 @@
+<%- include('../partials/header.ejs') %>
+    <main class="grid-main-events">
+        <div></div>
+        <div>
+            <% if(events.length) { %>
+                <% categories.forEach(category => { %>
+                    <h3><%= category %></h3>
+                    <% events.forEach(event => { %>
+                        <% if(event.category === category) { %>
+                            <a href="/events/<%= event.id %>"><p><%= event.title %></p></a>
+                        <% } %>
+                    <% }); %>
+                <% }); %>
+            <% } else { %>                
+                <p>There are no current events</p>
+            <% } %>            
+        </div>
+        <div></div>
+        <div></div>
+    </main>
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs') %>
+    <main class="grid-main">
+        <div></div>
+        <div>
+            <h1>Signup a new user</h1>
+            <form action = '/users' method = 'POST' class="grid-form">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+                
+                <label for="lastName">Last Name</label></td>
+                <input type="text" id="lastName" name="lastName" required>
+               
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" minlength="3" required>
+    
+                <label for="button"></label>
+                <button type="submit" id="button">Sign Up</button>      
+        </form>
+        </div>
+        <div></div>
+    </main>
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,40 @@
+<%- include('../partials/header.ejs') %>
+    <main class="grid-main">
+        <div>
+        </div>
+        <form class="grid-form" action="/events/all" enctype="multipart/form-data" method="POST">
+            <label for="category">Category</label>
+            <select name="category" id="category" required>
+                <option value="" selected disabled>--Select a Category--</option>
+                <option value="Study Group">Study Group</option>
+                <option value="Graduation Event">Graduation Event</option>
+                <option value="Company Event">Company Event</option>
+                <option value="Video Games">Video Games</option>
+                <option value="Sports">Sports</option>
+                <option value="Sports">Strippers</option>
+            </select>
+
+            <label for="title">Title</label>
+            <input type="text" id="title" placeholder="title" name="title" required>
+
+            <label for="startDate">Start</label>
+            <input type="datetime-local" id="startDate" name="startDate" required>
+
+            <label for="endDate">End</label>
+            <input type="datetime-local" id="endDate" name="endDate" required>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="location" name="location" required>
+
+            <label for="details">Details</label>
+            <input type="text" id="details" placeholder="Details of the event" name="details" required>
+
+            <label for="image">Image</label>
+            <input type="file" id="image" name="image" required>
+        
+            <label for="button"></label>
+            <button type="submit" id="button">Submit</button>
+        </form>
+        <div></div>
+    </main>
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs') %>
+    <main>
+
+        <div class="profile-h3">
+            <div></div>
+            <div>
+            <% if(events.length) { %>
+                <h2>My Events</h2>
+                <form action="">
+                <% events.forEach(event => { %>
+                    <p><a href="/events/<%= event.id %>"><%= event.title %></a></p>
+                    <button class="editDelete-button" type="submit" formmethod="POST" formaction="/events/<%= event.id %>?_method=DELETE"><img src="/images/delete2.png" alt="delete image"></button>
+                    <button class="editDelete-button" type="submit" formmethod="GET" formaction="/events/<%= event.id %>/edit"><img src="/images/edit.png" alt="edit image"></button>
+                <% }); %>
+                 </form>
+            <% } else { %>
+                <h2>My Events</h2>
+                <p>You have not yet started any events</p>
+            <% } %>
+            <br><br><br>
+            <% if(rsvps.length) { %>
+                <h2>My RSVPs</h2>
+                <% rsvps.forEach(rsvp => { %>
+                        <p class="my-rsvp"><a href="/events/<%= rsvp.event.id %>"><%= rsvp.event.title %></a> Status: <%= rsvp.status %></p>
+                <% }) %>
+            <% } %>
+            </div>
+            <div></div>
+            <div></div>            
+        </div>    
+    </main>
+<%- include('../partials/footer.ejs') %>
